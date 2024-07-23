@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function EditUser() {
-
-    let navigate = useNavigate();
+  let navigate = useNavigate();
 
   const { id } = useParams();
 
