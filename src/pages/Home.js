@@ -11,6 +11,11 @@ export default function Home() {
     loadUsers();
   }, []);
 
+  const loadUsers = async () => {
+    const result = await axios.get("http://localhost:8080/users");
+    setUsers(result.data);
+  };
+  
   return (
     <div className="container">
       <div className="py-4">
