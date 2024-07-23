@@ -3,6 +3,14 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
 export default function Home() {
+    const [users, setUsers] = useState([]);
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    loadUsers();
+  }, []);
+
   return (
     <div className="container">
       <div className="py-4">
