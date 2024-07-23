@@ -20,6 +20,11 @@ export default function EditUser() {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
+  useEffect(() => {
+    loadUser();
+  }, []);
+
+
   const loadUser = async () => {
     const result = await axios.get(`http://localhost:8080/user/${id}`);
     setUser(result.data);
