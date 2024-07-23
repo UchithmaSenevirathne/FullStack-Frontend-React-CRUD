@@ -13,4 +13,10 @@ export default function EditUser() {
     username: "",
     email: "",
   });
+
+  const { name, username, email } = user;
+
+  const onInputChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
 }
